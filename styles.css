@@ -1,0 +1,166 @@
+:root{
+    --primary: #00FFB7;
+    --grey: rgb(32, 32, 32);
+}
+
+body{
+    background-color: black !important;
+    color: white;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+button:hover, #blog article:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.button{
+    background-color: var(--primary);
+    border: none;
+}
+
+.ghost-button{
+    background: none;
+    color: var(--primary);
+    border-color: var(--primary);
+    border-style: solid;
+}
+
+.page{
+    margin-top: 150px !important;
+}
+
+/* Navigation */
+.nav-white{
+    background-color: rgb(255, 255, 255);
+}
+
+.nav-white a, .nav-white button{
+    color: black;
+}
+
+.nav-white button:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+nav{
+    top: 0;
+}
+
+nav, section{
+    padding: 0px 200px !important;
+}
+
+nav a, aside a{
+    color: white;
+    text-decoration: none;
+}
+
+nav .active{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+nav a:hover, aside a:hover{
+    opacity: .7;
+    text-decoration: none;
+}
+
+nav button{
+    background: none;
+    border: none;
+    color: white;
+}
+
+nav button:hover{
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.142);
+}
+
+nav img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+/* Home */
+#home {
+    background-image: url("./media/home-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+#home h1{
+    transform: scale(1.7);
+}
+
+#cta button{
+    width: 12rem;
+}
+
+/* Home/Content */
+#content{
+    background-color: black;
+}
+
+#content article{
+    margin-top: 200px;
+    padding: 0 30px;
+}
+
+#content img{
+    width: 500px;
+    height: 300px;
+    border-color: var(--primary);
+    border: solid 8px var(--primary);
+    transform: rotate(4deg);
+}
+
+#content article:first-child img{
+    transform: rotate(-1deg);
+}
+
+/* Profile */
+#profile img{
+    border: solid 8px var(--primary);
+    transform: rotate(4deg);
+    max-width: 350px;
+    object-fit: cover;
+}
+
+/* Dashboard */
+#dashboard aside{
+    border: solid 3px var(--grey);
+}
+
+/* Blog */
+#blog{
+    width: 100%;
+}
+
+#blog article{
+    border: solid 3px var(--grey);
+}
+
+#blog article b{
+    color: var(--primary);
+}
+
+/* FAQ */
+#faq details{
+    border: solid 3px var(--grey);
+}
+
+#faq details[open] {
+    border-color: var(--primary);
+}
+
+#faq details summary{
+    font-weight: bold;
+}
