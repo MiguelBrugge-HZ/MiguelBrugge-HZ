@@ -164,3 +164,7 @@ nav img{
 #faq details summary{
     font-weight: bold;
 }
+
+#faq a{
+    color: var(--primary);
+}
