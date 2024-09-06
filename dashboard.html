@@ -41,21 +41,42 @@
                 </ul>
             </nav>
             <section id="dashboard" class="page">
-                <div class="row">
-                    <aside class="col-md-3 rounded-3 p-2">
+                <div class="row ms-5">
+                    <section class="col-md-12 p-0 ms-5">
+                        <div class="d-flex gap-3 align-items-center">
+                            <h1 class="">Dashboard</h1>
+                            <button id="link-button" onclick="openSideMenu()"
+                            class="ghost-button fw-bold rounded-pill px-3 py-1 border-none">Open
+                            links</button>
+                        </div>
+                        <table id="dashboard-table">
+                            <tr>
+                                <th>Designation</th>
+                                <th>Name</th>
+                                <th>Grade</th>
+                                <th>EC</th>
+                                <th>Project</th>
+                                <th>Timing</th>
+                                <th>Status</th>
+                            </tr>
+                        </table>
+                        <br>
+                        <p class="m-0">Maximmum credits: 60 EC</p>
+                        <p class="m-0">Minimum credits required to pass (NBSA): 45 EC</p>
+                        <p>My total credits: <span id="total-credits"></span> EC</p>
+                    </section>
+                    <aside id="link-menu" class="d-none col-md-3 rounded-3 p-2 position-fixed end-0 me-5">
                         <h3>Useful links</h3>
                         <ul class="list-unstyled d-flex flex-column gap-5 m-0">
                             <li><a href="">ea</a></li>
                         </ul>
                     </aside>
-                    <section class="col-md-8 p-0 ms-5">
-                        <h1 class="">Dashboard</h1>
-                        <table></table>
-                    </section>
                 </div>
             </section>
         </article>
     </main>
+    <script src="./scripts/dashboard-data.js" type="module"></script>
+    <script src="./scripts/link-menu-toggle.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,85 @@
+{
+    "courses": [
+        {
+            "designation": "CU75001",
+            "name": "Program -& Career Orientation",
+            "grade": 5,
+            "ec": 2.5,
+            "project": "Portfolio website (Presentation)",
+            "timing": "Block 1",
+            "status": "Not Started"
+        },
+        {
+            "designation": "CU75002",
+            "name": "Computer Science Basics",
+            "grade": 6,
+            "ec": 5,
+            "project": "Written knowledge test",
+            "timing": "Block 1",
+            "status": "Not Started"
+        },
+        {
+            "designation": "CU75003",
+            "name": "Programming Basics",
+            "grade": 0,
+            "ec": 5,
+            "project": "Written knowledge test",
+            "timing": "Block 1",
+            "status": "Not Started"
+        },
+        {
+            "designation": "CU75068",
+            "name": "Personal Professional Development Exploration",
+            "grade": 4,
+            "ec": 12.5,
+            "project": "Criterion - referenced assessment",
+            "timing": "Block 1-4",
+            "status": "Not Started"
+        },
+        {
+            "designation": "Unknown",
+            "name": "IT Personality",
+            "grade": 2,
+            "ec": 2.5,
+            "project": "Portfolio",
+            "timing": "Block 2-4",
+            "status": "Not Started"
+        },
+        {
+            "designation": "CU75004",
+            "name": "Object Oriented Programming",
+            "grade": 7,
+            "ec": 10,
+            "project": "Presentation written knowledge test",
+            "timing": "Block 2",
+            "status": "Not Started"
+        },
+        {
+            "designation": "CU75081",
+            "name": "Business IT Consultancy Basics",
+            "grade": 0,
+            "ec": 2.5,
+            "project": "Assignment",
+            "timing": "Block 3-4",
+            "status": "Not Started"
+        },
+        {
+            "designation": "CU75080",
+            "name": "Framework Project 1",
+            "grade": 0,
+            "ec": 10,
+            "project": "Presentation written knowledge test, Presentation Portfolio",
+            "timing": "Block 3",
+            "status": "Not Started"
+        },
+        {
+            "designation": "CU75011",
+            "name": "Framework Project 2",
+            "grade": 0,
+            "ec": 10,
+            "project": "Presentation, portfolio",
+            "timing": "Block 4",
+            "status": "Not Started"
+        }
+    ]
+}

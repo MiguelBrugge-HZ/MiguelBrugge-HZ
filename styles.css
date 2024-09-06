@@ -135,8 +135,56 @@ nav img{
 }
 
 /* Dashboard */
+#dashboard{
+    margin-top: 80px !important;
+    padding: 0 100px !important;
+}
 #dashboard aside{
     border: solid 3px var(--grey);
+    background-color: black;
+}
+
+table{
+    border-radius: 5rem;
+}
+
+table, td, th {
+    /* border: 3px solid var(--grey) !important; */
+    padding: 10px;
+    width: max-content;
+}
+
+tr:nth-child(even) {
+    background-color: var(--grey) !important;
+}
+
+
+#dashboard .status-not-started{
+    font-weight: bold;
+    background-color: orange;
+    border: solid 5px black;
+}
+
+#dashboard .status-failed{
+    font-weight: bold;
+    background-color: red;
+    border: solid 5px black;
+}
+
+#dashboard .status-completed{
+    font-weight: bold;
+    background-color: #00c88f;
+    border: solid 5px black;
+}
+
+#dashboard .status-unknown{
+    font-weight: bold;
+    background-color: darkslategray;
+    border: solid 5px black;
+}
+
+#link-button{
+    height: min-content;
 }
 
 /* Blog */
