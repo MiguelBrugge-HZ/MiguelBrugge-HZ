@@ -3,9 +3,8 @@ const totalCredits = document.getElementById('total-credits');
 
 let amountOfCredits = 0;
 
-let response = await fetch(`${window.location.origin}/data/courses.json`);
-console.log(window.location.origin);
-console.log(window.location);
+const baseUrl = window.location.pathname.split('/').slice(0, -1).join('/');
+let response = await fetch(`${baseUrl}/data/courses.json`);
 let json = await response.json();
 let courses = json.courses;
 
