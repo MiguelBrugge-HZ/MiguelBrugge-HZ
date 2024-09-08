@@ -1,15 +1,15 @@
 export default function navigation(active) {
     return `
     <nav class="py-3 d-flex justify-content-between align-items-center position-fixed w-100">
-        <a href="/">
+        <a href="index.html">
             <button class="d-flex gap-2 align-items-center rounded-3 p-1">
-                <img class="rounded-pill" src="/media/profile-picture.png" alt="Profile picture" width="40">
+                <img class="rounded-pill" src="./media/profile-picture.png" alt="Profile picture" width="40">
                 <p class="m-0">Miguel Brugge</p>
             </button>
         </a>    
         <ul class="list-unstyled d-flex gap-5 m-0">
             <li>
-                <a class="${active === 'home' ? 'active' : ''}" href="/">Home</a>
+                <a class="${active === 'home' ? 'active' : ''}" href="index.html">Home</a>
             </li>
             <li>
                 <a class="${active === 'profile' ? 'active' : ''}" href="profile.html">Profile</a>

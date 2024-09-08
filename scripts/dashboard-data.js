@@ -3,7 +3,7 @@ const totalCredits = document.getElementById('total-credits');
 
 let amountOfCredits = 0;
 
-let response = await fetch('/data/courses.json');
+let response = await fetch('../data/courses.json');
 let json = await response.json();
 let courses = json.courses;
 
