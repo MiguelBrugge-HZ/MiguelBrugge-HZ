@@ -12,16 +12,16 @@ export default function navigation(active) {
                 <a class="${active === 'home' ? 'active' : ''}" href="/">Home</a>
             </li>
             <li>
-                <a class="${active === 'profile' ? 'active' : ''}" href="/pages/profile.html">Profile</a>
+                <a class="${active === 'profile' ? 'active' : ''}" href="profile.html">Profile</a>
             </li>
             <li>
-                <a class="${active === 'dashboard' ? 'active' : ''}" href="/pages/dashboard.html">Dashboard</a>
+                <a class="${active === 'dashboard' ? 'active' : ''}" href="dashboard.html">Dashboard</a>
             </li>
             <li>
-                <a class="${active === 'faq' ? 'active' : ''}" href="/pages/faq.html">FAQ</a>
+                <a class="${active === 'faq' ? 'active' : ''}" href="faq.html">FAQ</a>
             </li>
             <li>
-                <a class="${active === 'blog' ? 'active' : ''}" href="/pages/blog.html">Blog</a>
+                <a class="${active === 'blog' ? 'active' : ''}" href="blog.html">Blog</a>
             </li>
         </ul>
     </nav>
