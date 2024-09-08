@@ -3,23 +3,26 @@ const totalCredits = document.getElementById('total-credits');
 
 let amountOfCredits = 0;
 
-let response = await fetch('./data/courses.json');
+let response = await fetch('/data/courses.json');
 let json = await response.json();
 let courses = json.courses;
 
 courses.forEach(course => {
     const tr = document.createElement('tr');
     table.appendChild(tr);
+    // Loop through each attribute
     for (const prop in course) {
         const td = document.createElement('td');
         td.innerText = course[prop];
         tr.appendChild(td);
-        if(prop == "ec" && course['grade'] > 5.5){
+        // Count total amount of credits
+        if((course['grade'] > 5.5 || course['status'] == "Completed") && prop == "ec"){
             amountOfCredits += course[prop];
         }
         if (prop != "status") {
             continue;
         }
+        td.classList.add("status");
         // Completed
         if (course['grade'] > 5.5) {
             td.innerText = "Completed";

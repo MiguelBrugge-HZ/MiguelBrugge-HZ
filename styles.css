@@ -1,6 +1,6 @@
 :root{
     --primary: #00FFB7;
-    --grey: rgb(32, 32, 32);
+    --grey: #202020;
 }
 
 body{
@@ -12,7 +12,7 @@ body{
     display: none;
 }
 
-button:hover, #blog article:hover{
+button:hover{
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -85,6 +85,7 @@ nav img{
     height: 40px;
     object-fit: cover;
 }
+
 /* Home */
 #home {
     background-image: url("./media/home-background.png");
@@ -127,7 +128,7 @@ nav img{
 }
 
 /* Profile */
-#profile img{
+#profile img, #article img{
     border: solid 8px var(--primary);
     transform: rotate(4deg);
     max-width: 350px;
@@ -139,7 +140,7 @@ nav img{
     margin-top: 80px !important;
     padding: 0 100px !important;
 }
-#dashboard aside{
+aside{
     border: solid 3px var(--grey);
     background-color: black;
 }
@@ -160,44 +161,28 @@ tr:nth-child(even) {
 
 
 #dashboard .status-not-started{
-    font-weight: bold;
     background-color: orange;
-    border: solid 5px black;
 }
 
 #dashboard .status-failed{
-    font-weight: bold;
     background-color: red;
-    border: solid 5px black;
 }
 
 #dashboard .status-completed{
-    font-weight: bold;
     background-color: #00c88f;
-    border: solid 5px black;
 }
 
 #dashboard .status-unknown{
-    font-weight: bold;
     background-color: darkslategray;
+}
+
+#dashboard .status{
+    font-weight: bold;
     border: solid 5px black;
 }
 
 #link-button{
     height: min-content;
-}
-
-/* Blog */
-#blog{
-    width: 100%;
-}
-
-#blog article{
-    border: solid 3px var(--grey);
-}
-
-#blog article b{
-    color: var(--primary);
 }
 
 /* FAQ */
@@ -213,6 +198,42 @@ tr:nth-child(even) {
     font-weight: bold;
 }
 
+#faq details:hover{
+    cursor: pointer;
+    transform: scale(1.02) !important;
+}
+
 #faq a{
     color: var(--primary);
+}
+
+/* Blog */
+#blog{
+    width: 100%;
+}
+
+#blog button{
+    border: solid 3px transparent;
+    background: black;
+}
+
+#blog button:hover a{
+    color: var(--primary) !important;
+}
+
+#blog button:hover{
+    border: solid 3px var(--primary);
+}
+
+#blog button a{
+    text-decoration: none !important;
+}
+
+#blog p{
+    word-break: break-all;
+}
+
+/* Blog/Article */
+#blog button:hover{
+    transform: scale(1) !important;
 }

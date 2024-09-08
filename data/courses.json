@@ -3,7 +3,7 @@
         {
             "designation": "CU75001",
             "name": "Program -& Career Orientation",
-            "grade": 5,
+            "grade": 0,
             "ec": 2.5,
             "project": "Portfolio website (Presentation)",
             "timing": "Block 1",
@@ -12,7 +12,7 @@
         {
             "designation": "CU75002",
             "name": "Computer Science Basics",
-            "grade": 6,
+            "grade": 0,
             "ec": 5,
             "project": "Written knowledge test",
             "timing": "Block 1",
@@ -30,7 +30,7 @@
         {
             "designation": "CU75068",
             "name": "Personal Professional Development Exploration",
-            "grade": 4,
+            "grade": 0,
             "ec": 12.5,
             "project": "Criterion - referenced assessment",
             "timing": "Block 1-4",
@@ -39,7 +39,7 @@
         {
             "designation": "Unknown",
             "name": "IT Personality",
-            "grade": 2,
+            "grade": 0,
             "ec": 2.5,
             "project": "Portfolio",
             "timing": "Block 2-4",
@@ -48,7 +48,7 @@
         {
             "designation": "CU75004",
             "name": "Object Oriented Programming",
-            "grade": 7,
+            "grade": 0,
             "ec": 10,
             "project": "Presentation written knowledge test",
             "timing": "Block 2",
@@ -78,7 +78,7 @@
             "grade": 0,
             "ec": 10,
             "project": "Presentation, portfolio",
-            "timing": "Block 4",
+            "timing": "Block  4",
             "status": "Not Started"
         }
     ]

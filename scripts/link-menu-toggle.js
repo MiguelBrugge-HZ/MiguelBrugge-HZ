@@ -1,20 +1,13 @@
 const linkButton = document.getElementById('link-button');
 const linkMenu = document.getElementById('link-menu');
+
 function openSideMenu() {
     let isHidden = linkMenu.classList.contains('d-none');
-    if (isHidden) {
-        linkMenu.classList.remove('d-none');
-        linkMenu.classList.add('d-block');
-        linkButton.innerText = "Close links";
+    linkMenu.classList.toggle('d-none', !isHidden);
+    linkMenu.classList.toggle('d-block', isHidden);
 
-        linkButton.classList.add('button');
-        linkButton.classList.remove('ghost-button');
-    } else {
-        linkMenu.classList.remove('d-block');
-        linkMenu.classList.add('d-none');
-        linkButton.innerText = "Open links";
+    linkButton.innerText = isHidden ? "Close links" : "Open links";
+    linkButton.classList.toggle('button', isHidden);
+    linkButton.classList.toggle('ghost-button', !isHidden);
 
-        linkButton.classList.add('ghost-button');
-        linkButton.classList.remove('button');
-    }
 }
