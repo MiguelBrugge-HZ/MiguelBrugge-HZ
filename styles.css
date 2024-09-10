@@ -149,6 +149,13 @@ table{
     border-radius: 5rem;
 }
 
+#table-wrapper{
+    height: 65vh;
+    overflow: auto;
+    border: solid 5px var(--grey);
+    width: fit-content;
+}
+
 table, td, th {
     /* border: 3px solid var(--grey) !important; */
     padding: 10px;
@@ -227,6 +234,7 @@ tr:nth-child(even) {
 
 #blog button a{
     text-decoration: none !important;
+    font-style: italic;
 }
 
 #blog p{

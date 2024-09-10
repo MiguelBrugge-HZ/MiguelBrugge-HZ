@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./media/favicon.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Miguel Brugge</title>
+</head>
+
+<body class="text-white">
+    <header></header>
+    <main>
+        <section id="article" class="page">
+            <article>
+                <h1 class="text-center">Personal SWOT analysis</h1>
+                <br>
+                <section class="row justify-content-between gap-5 mt-3">
+                    <div class="col-md-5">
+                        <h3>Strengths</h3>
+                        <p>
+                            Planning
+                            As a Scrum master I was able to plan meetings a head of time so all were attended by my (and
+                            sometimes other) teams.
+                            <br>
+                            Motivation
+                            I always do what I have to do, even if I don't want to do it at all.
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Weaknessess</h3>
+                        <p>
+                            Shyness
+                            I tend to be shy with people I haven't met yet.
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Opportunities</h3>
+                        <p>
+                            Current Skills
+                            Because I did Software Development on the MBO, I am not new to programming and working
+                            inside a agile devOps team
+
+                            I also have used my skills to build and maintain a portfolio website
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Threats</h3>
+                        <p>
+                            Time
+
+                            Altough planning isn't new for me, I still have a job and have to travel a bit so I need to
+                            make sure that doesn't get in the way
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </section>
+    </main>
+    <script type="module">
+        import navigation from './components/navigation.js';
+        const navbarContainer = document.querySelector('header')
+        navbarContainer.innerHTML = navigation('blog');
+    </script>
+</body>
+
+</html>
