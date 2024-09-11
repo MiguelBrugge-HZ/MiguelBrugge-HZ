@@ -33,7 +33,7 @@
             "grade": 0,
             "ec": 12.5,
             "project": "Criterion - referenced assessment",
-            "timing": "Quarter 1",
+            "timing": "Quarter 1 - 4",
             "status": "Not Started"
         },
         {
@@ -42,7 +42,7 @@
             "grade": 0,
             "ec": 2.5,
             "project": "Portfolio",
-            "timing": "Quarter 2",
+            "timing": "Quarter 2 - 4",
             "status": "Not Started"
         },
         {
@@ -51,7 +51,7 @@
             "grade": "",
             "ec": "",
             "project": "",
-            "timing": "Quarter 3",
+            "timing": "Quarter 1 - 2",
             "status": "Not Started",
             "assessments": [
                 {
@@ -59,7 +59,7 @@
                     "name": "",
                     "grade": 0,
                     "ec": 5,
-                    "project": "Presentatie (groep)",
+                    "project": "Presentation (group)",
                     "timing": "",
                     "status": ""
                 },
@@ -68,20 +68,11 @@
                     "name": "",
                     "grade": 0,
                     "ec": 5,
-                    "project": "Schriftelijke kennistoets",
+                    "project": "Written knowledge test",
                     "timing": "",
                     "status": ""
                 }
             ]
-        },
-        {
-            "designation": "CU75081",
-            "name": "Business IT Consultancy Basics",
-            "grade": 0,
-            "ec": 2.5,
-            "project": "Assignment",
-            "timing": "Quarter 3",
-            "status": "Not Started"
         },
         {
             "designation": "CU75080",
@@ -89,7 +80,7 @@
             "grade": "",
             "ec": "",
             "project": "",
-            "timing": "Quarter 4",
+            "timing": "Quarter 3 - 4",
             "status": "Not Started",
             "assessments": [
                 {
@@ -97,7 +88,7 @@
                     "name": "",
                     "grade": 0,
                     "ec": 4,
-                    "project": "On-site casus toets",
+                    "project": "Written knowledge test",
                     "timing": "",
                     "status": ""
                 },
@@ -115,7 +106,7 @@
                     "name": "",
                     "grade": 0,
                     "ec": 2.5,
-                    "project": "Groepspresentatie project resultaat",
+                    "project": "Group presentation",
                     "timing": "",
                     "status": ""
                 },
@@ -124,11 +115,20 @@
                     "name": "",
                     "grade": 0,
                     "ec": 2.5,
-                    "project": "Groepsportfolio op requirements",
+                    "project": "Individual requirements",
                     "timing": "",
                     "status": ""
                 }
             ]
+        },
+        {
+            "designation": "CU75081",
+            "name": "Business IT Consultancy Basics",
+            "grade": 0,
+            "ec": 2.5,
+            "project": "Assignment",
+            "timing": "Quarter 3 - 4",
+            "status": "Not Started"
         },
         {
             "designation": "CU75011",
@@ -153,7 +153,7 @@
                     "name": "",
                     "grade": 0,
                     "ec": 2.5,
-                    "project": "Individueel project assessment",
+                    "project": "Report assessment",
                     "timing": "",
                     "status": ""
                 },
@@ -162,7 +162,7 @@
                     "name": "",
                     "grade": 0,
                     "ec": 5,
-                    "project": "IT-ontwikkelingsportfolio",
+                    "project": "IT Dev Portfolio",
                     "timing": "",
                     "status": ""
                 }
