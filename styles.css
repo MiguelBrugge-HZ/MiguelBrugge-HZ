@@ -34,24 +34,12 @@ button:hover{
 }
 
 /* Navigation */
-.nav-white{
-    background-color: rgb(255, 255, 255);
-}
-
-.nav-white a, .nav-white button{
-    color: black;
-}
-
-.nav-white button:hover{
-    background-color: rgb(235, 235, 235);
-}
-
 nav{
     top: 0;
 }
 
 nav, section{
-    padding: 0px 200px !important;
+    padding: 0px 15vw !important;
 }
 
 nav a, aside a{
@@ -106,18 +94,14 @@ nav img{
 }
 
 /* Home/Content */
-#content{
-    background-color: black;
-}
-
 #content article{
     margin-top: 200px;
     padding: 0 30px;
 }
 
 #content img{
-    width: 500px;
-    height: 300px;
+    max-width: 100%;
+    height: 250px;
     border-color: var(--primary);
     border: solid 8px var(--primary);
     transform: rotate(4deg);
@@ -128,7 +112,7 @@ nav img{
 }
 
 /* Profile */
-#profile img, #article img{
+#profile img, .blog-post img{
     border: solid 8px var(--primary);
     transform: rotate(4deg);
     max-width: 350px;
@@ -138,26 +122,21 @@ nav img{
 /* Dashboard */
 #dashboard{
     margin-top: 80px !important;
-    padding: 0 100px !important;
+    /* padding: 0 100px !important; */
 }
+
 aside{
     border: solid 3px var(--grey);
     background-color: black;
-}
-
-table{
-    border-radius: 5rem;
 }
 
 #table-wrapper{
     height: 65vh;
     overflow: auto;
     border: solid 5px var(--grey);
-    width: fit-content;
 }
 
 table, td, th {
-    /* border: 3px solid var(--grey) !important; */
     padding: 10px;
     width: max-content;
 }
@@ -165,7 +144,6 @@ table, td, th {
 tr:nth-child(even) {
     background-color: var(--grey) !important;
 }
-
 
 #dashboard .status-not-started{
     background-color: orange;
@@ -193,8 +171,13 @@ tr:nth-child(even) {
 }
 
 /* FAQ */
+#faq{
+    margin-top: 100px;
+}
+
 #faq details{
     border: solid 3px var(--grey);
+    user-select: none;
 }
 
 #faq details[open] {
@@ -210,13 +193,14 @@ tr:nth-child(even) {
     transform: scale(1.02) !important;
 }
 
-#faq a{
+#faq a, aside a{
     color: var(--primary);
 }
 
 /* Blog */
 #blog{
     width: 100%;
+    margin-top: 100px;
 }
 
 #blog button{
@@ -241,7 +225,17 @@ tr:nth-child(even) {
     word-break: break-all;
 }
 
-/* Blog/Article */
+/* Blog */
 #blog button:hover{
     transform: scale(1) !important;
+}
+
+@media only screen and (max-width: 700px) {
+    section{
+        padding: 0 50px !important;
+    }
+    #content img{
+        max-width: 110%;
+        height: 200px;
+    }
 }

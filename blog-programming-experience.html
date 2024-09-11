@@ -11,13 +11,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <title>Miguel Brugge</title>
+    <title>Portfolio/Post</title>
 </head>
 
 <body class="text-white">
-    <header></header>
     <main>
-        <section id="article" class="page">
+        <section class="blog-post page">
+            <a class="position-absolute top-0 mt-5" href="blog.html">
+                <button class="ghost-button fw-bold rounded-3 px-5 py-2 border-none">
+                    <p class="m-0"><- Blogs</p>
+                </button>
+            </a>
             <article>
                 <h1>Programming Experience</h1>
                 <br>
@@ -43,18 +47,13 @@
                     </div>
 
                     <img class="col-md-5 rounded-3 p-0"
-                        src="https://minio.fourdigits.nl/hvhl-prd/media/images/studiekeuzecheck-overleg-studenten.width-400.jpg"
-                        alt="">
+                        src="./media/programming_experience.png"
+                        alt="Monitor's with code open">
                 </div>
 
             </article>
         </section>
     </main>
-    <script type="module">
-        import navigation from './components/navigation.js';
-        const navbarContainer = document.querySelector('header')
-        navbarContainer.innerHTML = navigation('blog');
-    </script>
 </body>
 
 </html>

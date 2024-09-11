@@ -11,50 +11,52 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <title>Miguel Brugge</title>
+    <title>Portfolio/Post</title>
 </head>
 
 <body class="text-white">
-    <header></header>
     <main>
-        <section id="article" class="page">
+        <section class="blog-post page">
+            <a class="position-absolute top-0 mt-5" href="blog.html">
+                <button class="ghost-button fw-bold rounded-3 px-5 py-2 border-none">
+                    <p class="m-0"><- Blogs</p>
+                </button>
+            </a>
             <article>
-                <h1 class="text-center">Personal SWOT analysis</h1>
+                <h1>Personal SWOT analysis</h1>
                 <br>
-                <section class="row justify-content-between gap-5 mt-3">
-                    <div class="col-md-5">
+                <section class="row mt-3 p-0">
+                    <div class="col-md-3">
                         <h3>Strengths</h3>
-                        <p>
-                            Planning
+                        <p class="mt-3">
+                            - Planning:
                             As a Scrum master I was able to plan meetings a head of time so all were attended by my (and
                             sometimes other) teams.
-                            <br>
-                            Motivation
+                            <br><br>
+                            - Motivation:
                             I always do what I have to do, even if I don't want to do it at all.
                         </p>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-3">
                         <h3>Weaknessess</h3>
-                        <p>
-                            Shyness
+                        <p class="mt-3">
+                            - Shyness:
                             I tend to be shy with people I haven't met yet.
                         </p>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-3">
                         <h3>Opportunities</h3>
-                        <p>
-                            Current Skills
+                        <p class="mt-3">
+                            - Current Skills:
                             Because I did Software Development on the MBO, I am not new to programming and working
                             inside a agile devOps team
-
                             I also have used my skills to build and maintain a portfolio website
                         </p>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-3">
                         <h3>Threats</h3>
-                        <p>
-                            Time
-
+                        <p class="mt-3">
+                            - Time:
                             Altough planning isn't new for me, I still have a job and have to travel a bit so I need to
                             make sure that doesn't get in the way
                         </p>
@@ -63,11 +65,6 @@
             </article>
         </section>
     </main>
-    <script type="module">
-        import navigation from './components/navigation.js';
-        const navbarContainer = document.querySelector('header')
-        navbarContainer.innerHTML = navigation('blog');
-    </script>
 </body>
 
 </html>

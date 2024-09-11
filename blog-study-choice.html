@@ -11,63 +11,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <title>Miguel Brugge</title>
+    <title>Portfolio/Post</title>
 </head>
 
 <body class="text-white">
-    <header></header>
     <main>
-        <section id="article" class="page">
+        <section class="blog-post page">
+            <a class="position-absolute top-0 mt-5" href="blog.html">
+                <button class="ghost-button fw-bold rounded-3 px-5 py-2 border-none">
+                    <p class="m-0"><- Blogs</p>
+                </button>
+            </a>
             <article>
                 <h1>Study choice</h1>
                 <br>
                 <div class="row justify-content-between w-100">
                     <div class="col-md-7">
                         <p>
-                            Darth Vader: "The Force is with you, young Skywalker. But you are not a Jedi yet."
-
-                            Luke Skywalker: "You'll find I'm full of surprises."
-
-                            (Later in the duel...)
-
-                            Darth Vader: "There is no escape. Don't make me destroy you. Luke, you do not yet realize
-                            your
-                            importance. You have only begun to discover your power. Join me, and I will complete your
-                            training. With our combined strength, we can end this destructive conflict and bring order
-                            to
-                            the galaxy."
-
-                            Luke Skywalker: "I'll never join you!"
-                        </p>
-                        <p>
-                            Darth Vader: "The Force is with you, young Skywalker. But you are not a Jedi yet."
-
-                            Luke Skywalker: "You'll find I'm full of surprises."
-
-                            (Later in the duel...)
-
-                            Darth Vader: "There is no escape. Don't make me destroy you. Luke, you do not yet realize
-                            your
-                            importance. You have only begun to discover your power. Join me, and I will complete your
-                            training. With our combined strength, we can end this destructive conflict and bring order
-                            to
-                            the galaxy."
-
-                            Luke Skywalker: "I'll never join you!"
+                            After completing this study I would like to have a job within software development. I am not
+                            sure yet if i want to do sw engineering, fullstack, front-end or mainly back-end, but that's
+                            what I want to find out.
+                            <br><br>
+                            I want to get more experience as a programmer to see what fits me
+                            best and ofcourse to be a better developer not just with code but also working within an
+                            agile team.
                         </p>
                     </div>
 
-                    <img class="col-md-5 rounded-3 p-0" src="https://minio.fourdigits.nl/hvhl-prd/media/images/studiekeuzecheck-overleg-studenten.width-400.jpg" alt="">
+                    <img class="col-md-5 rounded-3 p-0" src="./media/study-choice.png" alt="Graduation caps held up in the air">
                 </div>
-
             </article>
         </section>
     </main>
-    <script type="module">
-        import navigation from './components/navigation.js';
-        const navbarContainer = document.querySelector('header')
-        navbarContainer.innerHTML = navigation('blog');
-    </script>
 </body>
 
 </html>

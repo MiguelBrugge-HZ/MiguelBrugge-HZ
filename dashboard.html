@@ -11,21 +11,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <title>Miguel Brugge</title>
+    <title>Portfolio/Dashboard</title>
 </head>
 
 <body class="text-white">
     <header></header>
-    <aside id="link-menu" class="d-none col-md-3 rounded-3 p-2 position-fixed end-0 me-5">
+    <aside id="link-menu" class="d-none col-md-3 rounded-3 p-3 position-fixed end-0 me-5">
         <h3>Useful links</h3>
-        <ul class="list-unstyled d-flex flex-column gap-5 m-0">
-            <li><a href="">ea</a></li>
+        <hr>
+        <ul class="list-unstyled d-flex flex-column gap-3 m-0">
+            <li><a href="https://oer.hz.nl/6978cdea-fb31-430b-9bf9-63206aa07754">The HZ HBO-ICT Course and Examination Regulations (CER)</a></li>
+            <li><a href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2023-2024/Juli/CER-HZ-Bachelor-full-time-2023-2024-DEF-version-20240412.pdf?_gl=1*1us1txq*_up*MQ..&gclid=Cj0KCQjwiuC2BhDSARIsALOVfBKurbY7bDLmshx8x2BGn1gRz97T8jy3Tz_x_yvpk8ipMFH4tgeMWnEaAt2hEALw_wcB">The Implementation Regulations (IR) of the HBO-ICT program</a></li>
+            <li><a href="https://learn.hz.nl/my/">HZ Learn environment</a></li>
+            <li><a href="https://hz.osiris-student.nl/voortgang">Study Progress</a></li>
+            <li><a href="https://github.com/HZ-HBO-ICT">HZ Github</a></li>
         </ul>
     </aside>
     <main>
         <section id="dashboard" class="page">
-            <div class="row ms-5">
-                <section class="col-md-12 p-0 ms-5">
+            <div class="">
+                <section class="p-0">
                     <div class="d-flex gap-3 align-items-center">
                         <h1 class="">Dashboard</h1>
                         <button id="link-button" onclick="openSideMenu()"
@@ -33,7 +38,7 @@
                             links</button>
                     </div>
                     <div id="table-wrapper" class="rounded-3">
-                        <table id="dashboard-table">
+                        <table id="dashboard-table" class="rounded-3 w-100">
                             <tr>
                                 <th>Designation</th>
                                 <th>Name</th>

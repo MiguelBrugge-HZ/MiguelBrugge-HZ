@@ -1,9 +1,17 @@
+
+/*
+ - This function generates a dynamic navigation bar for a webpage. 
+ - In each page with navigation there will be javascript code with puts this navigation inside the header tag.
+ - It takes one argument, `active`, which represents the current page the user is on. 
+ - Based on the value of `active`, the function highlights the navigation link.
+ */
+
 export default function navigation(active) {
     return `
     <nav class="py-3 d-flex justify-content-between align-items-center position-fixed w-100">
         <a href="index.html">
             <button class="d-flex gap-2 align-items-center rounded-3 p-1">
-                <img class="rounded-pill" src="./media/profile-picture.png" alt="Profile picture" width="40">
+                <img class="rounded-pill" src="./media/profile-picture.png" alt="Miguel's profile picture" width="40">
                 <p class="m-0">Miguel Brugge</p>
             </button>
         </a>    
