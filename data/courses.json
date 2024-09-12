@@ -3,7 +3,7 @@
         {
             "designation": "CU75001",
             "name": "Program -& Career Orientation",
-            "grade": 6,
+            "grade": 0,
             "ec": 2.5,
             "project": "Portfolio website (Presentation)",
             "timing": "Quarter 1",
@@ -57,7 +57,7 @@
                 {
                     "designation": "",
                     "name": "",
-                    "grade": 3,
+                    "grade": 6,
                     "ec": 5,
                     "project": "Presentation (group)",
                     "timing": "",
@@ -86,7 +86,7 @@
                 {
                     "designation": "",
                     "name": "",
-                    "grade": 6,
+                    "grade": 0,
                     "ec": 4,
                     "project": "Written knowledge test",
                     "timing": "",

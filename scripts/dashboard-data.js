@@ -36,12 +36,12 @@ function checkAssessments(object){
     let isCompleted = true;
     let isGraded = false;
 
-    if (object["assessments"]) {
-        for (const assesment of object["assessments"]) {
-            if (assesment['grade'] < 5.5) {
+    if(object["assessments"]){
+        for(const assesment of object["assessments"]){
+            if (assesment['grade'] < 5.5 && assesment['grade']) {
                 isCompleted = false;
             }
-            if (assesment['grade']) {
+            if(assesment['grade']){
                 isGraded = true;
             }
         }
@@ -54,7 +54,7 @@ function checkStatus(property, object, td){
         td.classList.add("status");
         
         let [isCompleted, isGraded] = checkAssessments(object);
-
+        console.log(isCompleted, isGraded);
         // If only one assessment is positivally graded change status of the course
         if (isGraded) {
             td.innerText = "Ongoing";
