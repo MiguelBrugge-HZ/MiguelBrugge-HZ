@@ -16,11 +16,12 @@
 </head>
 
 <body class="text-white">
+    <header></header>
     <main>
         <section class="blog-post page">
-            <a class="position-absolute top-0 mt-5" href="../blog.html">
+            <a class="post-return-link position-absolute mt-5" href="../blog.html">
                 <button class="ghost-button fw-bold rounded-3 px-5 py-2 border-none">
-                    <p class="m-0"><- Blogs</p>
+                    <p class="m-0">&lt;- Blogs</p>
                 </button>
             </a>
             <article>
@@ -38,12 +39,16 @@
                             agile team.
                         </p>
                     </div>
-
                     <img class="col-md-5 rounded-3 p-0" src="../media/study-choice.png" alt="Graduation caps held up in the air">
                 </div>
             </article>
         </section>
     </main>
+    <script type="module">
+        import navigation from '../components/navigation.js';
+        const navbarContainer = document.querySelector('header')
+        navbarContainer.innerHTML = navigation('blog-post');
+    </script>
 </body>
 
 </html>

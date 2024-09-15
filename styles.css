@@ -71,7 +71,8 @@ nav button:hover{
 nav img{
     width: 40px;
     height: 40px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #c0cac5;
 }
 
 /* Home */
@@ -130,6 +131,10 @@ aside{
     background-color: black;
 }
 
+aside a{
+    color: var(--primary);
+}
+
 #table-wrapper{
     height: 65vh;
     overflow: auto;
@@ -158,7 +163,7 @@ tr:nth-child(even) {
 }
 
 #dashboard .status-unknown{
-    background-color: darkslategray;
+    background-color: rebeccapurple;
 }
 
 #dashboard .status{
@@ -193,7 +198,7 @@ tr:nth-child(even) {
     transform: scale(1.02) !important;
 }
 
-#faq a, aside a{
+#faq a,   a{
     color: var(--primary);
 }
 
@@ -224,10 +229,16 @@ tr:nth-child(even) {
 #blog p{
     word-break: break-all;
 }
-
-/* Blog */
 #blog button:hover{
     transform: scale(1) !important;
+}
+
+.blog-post img{
+    object-fit: fill;
+}
+
+.post-return-link{
+    top: 2rem;
 }
 
 @media only screen and (max-width: 700px) {

@@ -32,13 +32,17 @@ function sumGrades(property, object) {
 }
 
 // Check if a course with assessement is completed and if it's partly graded
-function checkAssessments(object){
+function checkAssessments(object) {
     let isCompleted = true;
     let isGraded = false;
-
-    if(object["assessments"]){
+    let onGoing = false;
+    if (object["assessments"]) {
         for(const assesment of object["assessments"]){
-            if (assesment['grade'] < 5.5 && assesment['grade']) {
+            if(!assesment['grade']){
+                onGoing = true;
+                continue;
+            }
+            if (assesment['grade'] < 5.5) {
                 isCompleted = false;
             }
             if(assesment['grade']){
@@ -46,25 +50,25 @@ function checkAssessments(object){
             }
         }
     }
-    return [isCompleted, isGraded];
+    return [isCompleted, isGraded, onGoing];
 }
 
-function checkStatus(property, object, td){
+function checkStatus(property, object, td) {
     if (property == "status") {
         td.classList.add("status");
-        
-        let [isCompleted, isGraded] = checkAssessments(object);
-        console.log(isCompleted, isGraded);
+
+        let [isCompleted, isGraded, onGoing] = checkAssessments(object);
+        console.log(isCompleted, isGraded, object);
         // If only one assessment is positivally graded change status of the course
-        if (isGraded) {
+        if(isGraded){
             td.innerText = "Ongoing";
             td.classList.add("status-unknown");
         }
-        if (object['grade'] > 5.5) {
+        if (object['grade'] > 5.5 || (isCompleted && isGraded && !onGoing)) {
             td.innerText = "Completed";
             td.classList.add("status-completed");
             td.classList.remove("status-unknown");
-            // Failed
+        // Failed
         } else if (object['grade'] < 5.5 && object['grade'] || !isCompleted) {
             td.innerText = "Failed";
             td.classList.add("status-failed");
@@ -112,7 +116,7 @@ function addColumn(object, isCourse, tr) {
 
         // Assessments shouldn't be checked on status
         if (!isCourse) { continue; }
-        
+
         checkStatus(property, object, td);
     }
 }
