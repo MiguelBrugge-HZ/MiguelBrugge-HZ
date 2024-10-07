@@ -2,7 +2,7 @@
     "courses": [
         {
             "designation": "CU75001",
-            "name": "Program -& Career Orientation",
+            "name": "Program & Career Orientation",
             "grade": 6,
             "ec": 2.5,
             "project": "Portfolio website (Presentation)",
@@ -12,7 +12,7 @@
         {
             "designation": "CU75002",
             "name": "Computer Science Basics",
-            "grade": 0,
+            "grade": 6,
             "ec": 5,
             "project": "Written knowledge test",
             "timing": "Quarter 1",
@@ -21,7 +21,7 @@
         {
             "designation": "CU75003",
             "name": "Programming Basics",
-            "grade": 0,
+            "grade": 7,
             "ec": 5,
             "project": "Written knowledge test",
             "timing": "Quarter 1",
@@ -30,7 +30,7 @@
         {
             "designation": "CU75068",
             "name": "Personal Professional Development Exploration",
-            "grade": 0,
+            "grade": 5,
             "ec": 12.5,
             "project": "Criterion - referenced assessment",
             "timing": "Quarter 1 - 4",
@@ -57,7 +57,7 @@
                 {
                     "designation": "",
                     "name": "",
-                    "grade": 6,
+                    "grade": 0,
                     "ec": 5,
                     "project": "Presentation (group)",
                     "timing": "",

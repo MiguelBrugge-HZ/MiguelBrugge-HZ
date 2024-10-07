@@ -6,6 +6,7 @@
     Functionalities:
     - Sum of all obtained EC's
     - Change the course's status based on grades
+    - Progression bar
 */
 
 const table = document.getElementById('dashboard-table');
@@ -14,8 +15,8 @@ const totalCreditsElement = document.getElementById('total-credits');
 let sumOfCredits = 0;
 
 const baseUrl = window.location.pathname.split('/').slice(0, -1).join('/');
-let response = await fetch(`${baseUrl}/data/courses.json`);
-let json = await response.json();
+const response = await fetch(`${baseUrl}/data/courses.json`);
+const json = await response.json();
 let courses = json.courses;
 
 function addAssessment(object) {
@@ -57,8 +58,7 @@ function checkStatus(property, object, td) {
     if (property == "status") {
         td.classList.add("status");
 
-        let [isCompleted, isGraded, onGoing] = checkAssessments(object);
-        console.log(isCompleted, isGraded, object);
+        const [isCompleted, isGraded, onGoing] = checkAssessments(object);
         // If only one assessment is positivally graded change status of the course
         if(isGraded){
             td.innerText = "Ongoing";
@@ -136,3 +136,6 @@ function generateDashboard() {
 }
 
 generateDashboard();
+const progressBar = document.getElementById('progress-bar');
+const widthPercentage = (sumOfCredits / 60) * 100;
+progressBar.style.width = widthPercentage + '%';

@@ -3,7 +3,7 @@ const linkMenu = document.getElementById('link-menu');
 
 // Toggle the aside by adding and removing the display style
 function openSideMenu() {
-    let isHidden = linkMenu.classList.contains('d-none');
+    const isHidden = linkMenu.classList.contains('d-none');
     linkMenu.classList.toggle('d-none', !isHidden);
     linkMenu.classList.toggle('d-block', isHidden);
 

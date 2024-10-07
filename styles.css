@@ -123,7 +123,6 @@ nav img{
 /* Dashboard */
 #dashboard{
     margin-top: 80px !important;
-    /* padding: 0 100px !important; */
 }
 
 aside{
@@ -175,6 +174,14 @@ tr:nth-child(even) {
     height: min-content;
 }
 
+#progress-bar-rails{
+    background-color: var(--grey);;
+}
+
+#progress-bar{
+    background-color: var(--primary) !important;
+}
+
 /* FAQ */
 #faq{
     margin-top: 100px;
@@ -198,7 +205,7 @@ tr:nth-child(even) {
     transform: scale(1.02) !important;
 }
 
-#faq a,   a{
+#faq a, a{
     color: var(--primary);
 }
 
