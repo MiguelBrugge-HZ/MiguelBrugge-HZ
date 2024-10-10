@@ -12,7 +12,7 @@
         {
             "designation": "CU75002",
             "name": "Computer Science Basics",
-            "grade": 6,
+            "grade": 5,
             "ec": 5,
             "project": "Written knowledge test",
             "timing": "Quarter 1",
@@ -21,19 +21,10 @@
         {
             "designation": "CU75003",
             "name": "Programming Basics",
-            "grade": 7,
+            "grade": 0,
             "ec": 5,
             "project": "Written knowledge test",
             "timing": "Quarter 1",
-            "status": "Not Started"
-        },
-        {
-            "designation": "CU75068",
-            "name": "Personal Professional Development Exploration",
-            "grade": 5,
-            "ec": 12.5,
-            "project": "Criterion - referenced assessment",
-            "timing": "Quarter 1 - 4",
             "status": "Not Started"
         },
         {
@@ -51,13 +42,13 @@
             "grade": "",
             "ec": "",
             "project": "",
-            "timing": "Quarter 1 - 2",
+            "timing": "Quarter 2",
             "status": "Not Started",
             "assessments": [
                 {
                     "designation": "",
                     "name": "",
-                    "grade": 0,
+                    "grade": 6,
                     "ec": 5,
                     "project": "Presentation (group)",
                     "timing": "",
@@ -80,7 +71,7 @@
             "grade": "",
             "ec": "",
             "project": "",
-            "timing": "Quarter 3 - 4",
+            "timing": "Quarter 3",
             "status": "Not Started",
             "assessments": [
                 {
@@ -167,6 +158,15 @@
                     "status": ""
                 }
             ]
+        },
+        {
+            "designation": "CU75068",
+            "name": "Personal Professional Development Exploration",
+            "grade": 0,
+            "ec": 12.5,
+            "project": "Criterion - referenced assessment",
+            "timing": "Quarter 1 - 4",
+            "status": "Not Started"
         }
     ]
 }
