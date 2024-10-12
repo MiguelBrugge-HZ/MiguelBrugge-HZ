@@ -8,10 +8,6 @@
     - Change the course's status based on grades
     - Progression bar
 */
-
-const table = document.getElementById('dashboard-table');
-const totalCreditsElement = document.getElementById('total-credits');
-
 let sumOfCredits = 0;
 
 const baseUrl = window.location.pathname.split('/').slice(0, -1).join('/');
@@ -29,7 +25,7 @@ createProgressBar();
 function addAssessment(course) {
     // Loop through each assesment to add row for each one
     for (const assessment of course["assessments"]) {
-        addRow(assessment, false)
+        addAssessmentRow(assessment, false)
     }
 }
 
@@ -38,7 +34,7 @@ function addAssessment(course) {
  * @param {*} property Property of the object
  * @param {*} object A course of a assessment
  */
-function sumGrades(property, object) {
+function giveCreditsBasedOnGrades(property, object) {
     if (property == "grade" && object[property] && object['grade'] > 5.5) {
         sumOfCredits += object["ec"];
     }
@@ -49,20 +45,20 @@ function sumGrades(property, object) {
  * @param {*} course The course
  * @returns If it's completed, graded and still on going or not.
  */
-function checkAssessments(course) {
+function checkAssessmentsState(course) {
     let isCompleted = true;
     let isGraded = false;
     let onGoing = false;
     if (course["assessments"]) {
-        for(const assesment of course["assessments"]){
-            if(!assesment['grade']){
+        for (const assesment of course["assessments"]) {
+            if (!assesment['grade']) {
                 onGoing = true;
                 continue;
             }
             if (assesment['grade'] < 5.5) {
                 isCompleted = false;
             }
-            if(assesment['grade']){
+            if (assesment['grade']) {
                 isGraded = true;
             }
         }
@@ -74,39 +70,39 @@ function checkAssessments(course) {
  * Sets course status and adds the deserved EC's
  * @param {*} property The property of the course
  * @param {*} course The course that needs a status
- * @param {*} td Table Row
+ * @param {*} tableCell Table Row
  */
-function checkStatus(property, course, td) {
+function changeCourseStatus(property, course, tableCell) {
     if (property == "status") {
-        td.classList.add("status");
+        tableCell.classList.add("status");
 
-        const [isCompleted, isGraded, onGoing] = checkAssessments(course);
+        const [isCompleted, isGraded, onGoing] = checkAssessmentsState(course);
         // If only one assessment is positivally graded change status of the course
-        if(isGraded){
-            td.innerText = "Ongoing";
-            td.classList.add("status-unknown");
+        if (isGraded) {
+            tableCell.innerText = "Ongoing";
+            tableCell.classList.add("status-unknown");
         }
         if (course['grade'] > 5.5 || (isCompleted && isGraded && !onGoing)) {
-            td.innerText = "Completed";
-            td.classList.add("status-completed");
-            td.classList.remove("status-unknown");
-        // Failed
+            tableCell.innerText = "Completed";
+            tableCell.classList.add("status-completed");
+            tableCell.classList.remove("status-unknown");
+            // Failed
         } else if (course['grade'] < 5.5 && course['grade'] || !isCompleted) {
-            td.innerText = "Failed";
-            td.classList.add("status-failed");
-            td.classList.remove("status-unknown");
+            tableCell.innerText = "Failed";
+            tableCell.classList.add("status-failed");
+            tableCell.classList.remove("status-unknown");
         }
 
         // If status is set
         switch (course[property]) {
             case "Not Started":
-                td.classList.add("status-not-started");
+                tableCell.classList.add("status-not-started");
                 break;
             case "Failed":
-                td.classList.add("status-failed");
+                tableCell.classList.add("status-failed");
                 break;
             case "Completed":
-                td.classList.add("status-completed");
+                tableCell.classList.add("status-completed");
                 // Add total amount of ec's from the course
                 if (course["assessments"]) {
                     for (const assesment of course["assessments"]) {
@@ -117,8 +113,8 @@ function checkStatus(property, course, td) {
                 }
                 break;
             default:
-                td.innerText = "Unknown";
-                td.classList.add("status-unknown");
+                tableCell.innerText = "Unknown";
+                tableCell.classList.add("status-unknown");
                 break;
         }
     }
@@ -128,24 +124,24 @@ function checkStatus(property, course, td) {
  * Adds columns for each property of the object
  * @param {*} object A course or assessment
  * @param {*} isCourse If the given object is a course
- * @param {*} tr The table row element to add the columns to
+ * @param {*} tableRow The table row element to add the columns to
  */
-function addColumns(object, isCourse, tr) {
+function addColumns(object, isCourse, tableRow) {
     for (const property in object) {
         if (property == "assessments") {
             addAssessment(object);
             continue;
         }
-        const td = document.createElement('td');
-        td.innerText = object[property];
-        tr.appendChild(td);
+        const tableCell = document.createElement('td');
+        tableCell.innerText = object[property];
+        tableRow.appendChild(tableCell);
 
-        sumGrades(property, object);
+        giveCreditsBasedOnGrades(property, object);
 
         // Assessments shouldn't be checked on status
         if (!isCourse) { continue; }
 
-        checkStatus(property, object, td);
+        changeCourseStatus(property, object, tableCell);
     }
 }
 
@@ -154,10 +150,11 @@ function addColumns(object, isCourse, tr) {
  * @param {*} object The course or assessment to create a row of
  * @param {*} isCourse If the given object is a course
  */
-function addRow(object, isCourse) {
-    const tr = document.createElement('tr');
-    table.appendChild(tr);
-    addColumns(object, isCourse, tr)
+function addAssessmentRow(object, isCourse) {
+    const tableRow = document.createElement('tr');
+    const dashboardTable = document.getElementById('dashboard-table');
+    dashboardTable.appendChild(tableRow);
+    addColumns(object, isCourse, tableRow)
 }
 
 /**
@@ -166,8 +163,9 @@ function addRow(object, isCourse) {
 function createDashboard() {
     // Add row for each course
     for (const course of courses) {
-        addRow(course, true);
+        addAssessmentRow(course, true);
     }
+    const totalCreditsElement = document.getElementById('total-credits');
     totalCreditsElement.innerText = sumOfCredits;
 }
 
